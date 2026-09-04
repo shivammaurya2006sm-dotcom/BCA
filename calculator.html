@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+  <title>Calculator</title>
+  <style>
+    body{
+      /* background-color:rgb(255, 42, 202); */
+      font-family: Algerian Regular;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .cal{
+       border:4px solid;
+       border-radius: 30px;
+       margin:20px;
+       padding:30px;
+       width: 400px;
+       margin-left:400px;
+       background-color:  lightcyan;
+    }
+    .tbn{
+      border: solid 4px #000000;
+      border-radius:10px;
+      width: 80px;
+      height: 60px;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-left: 10px;
+      background-color:   #cfcfcf;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .operator{
+      border: solid 4px #000000;
+      border-radius:10px;
+      width: 80px;
+      height: 60px;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-left: 10px;
+      background-color: #cfcfcf;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .operator:hover{
+      /* background-color: #000000; */
+      color:red;
+    }
+    #zero{
+      border: solid 4px #000000;
+      border-radius:10px;
+      width: 170px;
+      height: 60px;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-left: 10px;
+      background-color: #dbd9d9;
+      font-size: 40px;
+      cursor: pointer;
+    }
+     .display{
+      background-color: honeydew;
+      width: 350px;
+      height: 60px;
+      font-size: 30px;
+      text-align: right;
+      border: solid 4px #000000;
+      border-radius:10px;}
+  </style>
+  </head>
+  <form name="form1" class="cal" action="calculator.html"method="POST">
+    <input type="text" name="answer" class="display">
+    <br></br>
+    <input type="button" class="tbn" value="C" onclick="form1.answer.value='' ">
+     <input type="button" class="tbn" value="<" onclick="form1.answer.value=form1.answer.value.substring(0,form1.answer.value.length*1-1)">
+    <input type="button" class="tbn" value="00" onclick="form1.answer.value+='00'">
+    <input type="button" class=" operator" value="/" onclick="form1.answer.value+='/' ">
+    <br></br>
+
+    <input type="button" class="tbn" value="7" onclick="form1.answer.value+='7' ">
+    <input type="button" class="tbn" value="8" onclick="form1.answer.value+='8' ">
+    <input type="button" class="tbn" value="9" onclick="form1.answer.value+='9' ">
+    <input type="button" class="operator" " value="*" onclick="form1.answer.value+='*' ">
+     
+    <br></br>
+
+    <input type="button" class="tbn" value="4" onclick="form1.answer.value+='4' ">
+    <input type="button" class="tbn" value="5" onclick="form1.answer.value+='5' ">
+    <input type="button" class="tbn" value="6" onclick="form1.answer.value+='6' ">
+    <input type="button" class="operator " value="-" onclick="form1.answer.value+='-' ">
+    <br></br>
+    <input type="button" class="tbn" value="1" onclick="form1.answer.value+='1' ">
+    <input type="button" class="tbn" value="2" onclick="form1.answer.value+='2' ">
+    <input type="button" class="tbn" value="3" onclick="form1.answer.value+='3' ">
+    <input type="button" class=" operator" value="+" onclick="form1.answer.value+='+' ">
+  
+     <br></br>
+
+    <input type="button" id="zero" value="0" onclick="form1.answer.value+='0' ">
+    <input type="button" class="tbn" value="." onclick="form1.answer.value+='.' ">
+    <input type="button" class=" operator" value="=" onclick="form1.answer.value=eval(form1.answer.value) ">
+  </form>
+</html>
