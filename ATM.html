@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                justify-content: center;
+                flex-direction:row;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                align-content: center;
+                margin-top: 30px;
+                gap: 5px;
+            }
+            .atm{
+                align-items: center;
+                text-align: center;
+                border: solid 3px rgb(91, 89, 89);
+                background-color: rgb(174, 171, 171);
+                color: red;
+                height: 300px;
+                width: 200px;
+            }
+            .disk{
+                padding-right:90px;
+            }
+            .ATM{
+                border: solid  rgb(91, 89, 89) 3px;
+                background:lightblue; ;
+                color: red;
+                width: 80px;
+                padding: 5px;
+                margin-left:50px ;
+            }
+            .card{
+                color: red;
+                background:rgb(75, 193, 232);
+                border: 3px solid rgb(91, 89, 89);;
+                width: 170px;
+                margin-top: 30px;
+                margin-left: 8px;
+                padding: 5px;
+            }
+/*111111========================================== */
+         .CARD{
+            border: 3px solid  rgb(91, 89, 89);
+            width: 200px;
+            height: 300px;
+            color: red;
+            background-color:  rgb(174, 171, 171);
+         }
+         .border{
+            border: solid black;
+            width: 170px;
+            height: 30px;
+            margin:20px 0 0px 10px;
+         }
+         .insert{
+            border: solid black;
+            background-color: white;
+            margin: 10px 0 0 8px;
+            height:5px;
+            width: 150px;
+        }
+        .box{
+            border: solid black;
+            width: 170px;
+            height: 30px;
+            margin:20px 0 0px 10px;
+         }
+         .cash{
+            border: solid black;
+            background-color: white;
+            margin: 10px 0 0 8px;
+            height:5px;
+            width: 150px;
+        }
+        .reciept{
+            border: solid black;
+            width: 170px;
+            height: 30px;
+            margin:20px 0 0px 10px;
+         }
+         .take{
+            border: solid black;
+             background-color: white;
+            margin: 10px 0 0 8px;
+            height:5px;
+            width: 150px;
+        }
+   /*222222222222 ============================================== */
+        .amount{
+            border:solid 3px rgb(91, 89, 89);
+            width: 200px;
+            height: 300px;
+            color: red;
+            background-color: rgb(174, 171, 171);
+        }
+        .PIN{
+            border: solid 2px rgb(91, 89, 89);
+            width: 173px;
+            height: 20px;
+            margin:15px 0 0px 8px;
+        }
+        .btn{
+            border: solid 2px rgb(91, 89, 89);
+            border-radius: 5px;
+            color:white;
+            background-color:black;
+            margin: 0px 0 0px 8px;
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .Delbtn{
+            border: solid 2px rgb(91, 89, 89);
+            border-radius: 5px;
+            color:white;
+            background-color:black;
+            margin: 0px 0 0px 8px;
+            width: 45px;
+            height: 35px;
+            font-size:15px;
+            cursor: pointer;
+        }
+        #zero{
+            border: solid 2px rgb(91, 89, 89);
+            border-radius: 5px;
+            color:white;
+            background-color:black;
+            margin: 0px 0px 0px 10px;
+            width: 75px;
+            height: 35px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="atm">
+            <h1 class="ATM">ATM</h1>
+            <p>WELCOM TO SMART ATM</p>
+            <div class="disk">
+                <ul type="square">
+                    <li> secure </li>
+                    <li>fast</li>
+                    <li>reliable</li>
+                </ul>
+            </div>
+            <p class="card">INSERT YOUR CARD</p>
+        </div>
+        <div class="CARD">
+            <div class="border">
+           <div class="insert"></div></div>
+            <h4>INSERT CARD</h4>
+            <div class="box">
+            <div class="cash"></div></div>
+            <h4>CASH</h4>
+            <div class="reciept"> 
+            <div class="take"></div></div>
+            <h4>TAKE RECEIPT</h4>
+        </div>
+        <div class="amount">
+            <h4>ENTER YOUR PIN</h4>
+            <form name="form1" class="PIN" action="amount.html"method="POST">
+            <!-- <input type="text" name="answer" class="display"> -->
+            <input type="text" name="answer" class="display">
+    <br></br>
+     
+    <input type="button" class="btn" value="1" onclick="form1.answer.value+='1' ">
+    <input type="button" class="btn" value="2" onclick="form1.answer.value+='2' ">
+    <input type="button" class="btn" value="3" onclick="form1.answer.value+='3' ">
+    <br></br>
+    <input type="button" class="btn" value="4" onclick="form1.answer.value+='4'">
+    <input type="button" class="btn" value="5" onclick="form1.answer.value+='5' ">
+    <input type="button" class="btn" value="6" onclick="form1.answer.value+='6' ">    
+    <br></br>
+    <input type="button" class="btn" value="7" onclick="form1.answer.value+='7' ">
+    <input type="button" class="btn" value="8" onclick="form1.answer.value+='8' ">
+    <input type="button" class="btn" value="9" onclick="form1.answer.value+='9' "> 
+     <br></br>  
+     <input type="button" id="zero" value="0" onclick="form1.answer.value+='0' ">
+     <input type="button" class="Delbtn" value="DEL" onclick="form1.answer.value=form1.answer.value.substring(0,form1.answer.value.length*1-1)">   
+
+    </form>
+        </div>
+
+    </body>
+</html>
